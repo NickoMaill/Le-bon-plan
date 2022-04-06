@@ -7,6 +7,17 @@
 		<title>Le Bon Plan</title>
 	</head>
 	<body>
+		<header>
+			<nav>
+				<a href="/">Accueil</a>
+				{{#if isLoggedIn}}
+				<a href="/user/profil">Espace Perso</a>
+				{{else}}
+				<a href="/user/login">Se connecter</a>
+				<a href="/user/register">S'inscrire</a>
+				{{/if}}
+			</nav>
+		</header>
 		{{{body}}}
 	</body>
 </html>
