@@ -21,7 +21,6 @@ app.use("/products", products);
 app.use("/user", user);
 
 app.get("/", cookieVerify, (req, res) => {
-    console.log(req.cookies.userCookie);
   res.render("homepage", {
     isLoggedIn: req.logged,
   });

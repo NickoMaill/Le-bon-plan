@@ -8,7 +8,6 @@ async function cookieVerify(req, res, next) {
       
 } else {
       tokenDecode = jwt.decode(req.cookies.userCookie);
-      req.logged = true
       try {
         if (tokenDecode.exp - tokenDecode.iat === 1296000) {
           req.logged = false;
